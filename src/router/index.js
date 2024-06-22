@@ -20,14 +20,15 @@ const router = createRouter({
                     props: true
                 },
                 {
-                    path: '/uikit/formlayout',
-                    name: 'formlayout',
-                    component: () => import('@/views/uikit/FormLayout.vue')
+                    path: '/genreslist',
+                    name: 'genreslist',
+                    component: () => import('@/views/GenreList.vue')
                 },
                 {
-                    path: '/uikit/input',
-                    name: 'input',
-                    component: () => import('@/views/uikit/Input.vue')
+                    path: '/genreshows/:id',
+                    name: 'genreshows',
+                    component: () => import('@/views/Genre.vue'),
+                    props: true
                 },
                 {
                     path: '/uikit/floatlabel',

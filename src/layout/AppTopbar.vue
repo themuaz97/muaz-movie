@@ -31,7 +31,7 @@ const onSearchInput = async (event) => {
     try {
         const response = await axios.get('https://api.themoviedb.org/3/search/movie', {
             params: {
-                api_key: import.meta.env.VITE_SEARCH_API_KEY,
+                api_key: import.meta.env.VITE_API_KEY,
                 query: searchQuery.value
             }
         });

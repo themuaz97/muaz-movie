@@ -30,6 +30,7 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+.env
 
 # Themes
 public/themes/soho-light/

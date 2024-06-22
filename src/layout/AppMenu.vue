@@ -10,12 +10,8 @@ const model = ref([
     },
     {
         label: 'Categories',
-        items: [{ label: 'Genre', icon: 'pi pi-fw pi-id-card', to: '/uikit/formlayout' }]
+        items: [{ label: 'Genres', icon: 'pi pi-list', to: '/genreslist' }]
     },
-    {
-        label: 'Help',
-        items: [{ label: 'table', icon: 'pi pi-fw pi-question', to: '/uikit/table' }]
-    }
 ]);
 </script>
 
