@@ -12,7 +12,7 @@ npm install
 or
 
 ```sh
-npm install
+npm i
 ```
 
 ### Compile and Hot-Reload for Development
@@ -20,6 +20,10 @@ npm install
 ```sh
 npm run dev
 ```
+
+### .env file
+
+ensure to rename .env.example to .env and uncomment the api key
 
 ### Compile and Minify for Production
 
