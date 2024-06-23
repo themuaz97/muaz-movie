@@ -132,7 +132,7 @@ const closeSidebar = () => {
             </Sidebar>
             <button class="p-link layout-topbar-button" @click="visibleFull = true">
                 <i class="pi pi-search"></i>
-                <span>Profile</span>
+                <span>Search</span>
             </button>
         </div>
     </div>

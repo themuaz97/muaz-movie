@@ -31,16 +31,16 @@
         (newId) => {
             fetchMovieDetails(newId);
         }
-);
+    );
 
     const formattedRuntime = computed(() => {
-    if (movie.value && movie.value.runtime) {
-        const hours = Math.floor(movie.value.runtime / 60);
-        const minutes = movie.value.runtime % 60;
-        return `${hours} hours ${minutes} minutes`;
-    }
-    return 'N/A';
-});
+        if (movie.value && movie.value.runtime) {
+            const hours = Math.floor(movie.value.runtime / 60);
+            const minutes = movie.value.runtime % 60;
+            return `${hours} hours ${minutes} minutes`;
+        }
+        return 'N/A';
+    });
 </script>
 
 <template>
@@ -50,17 +50,15 @@
         <!-- img -->
         <div class="relative grid gap-4 p-4">
             <div class="col-4 md:col-3 flex justify-center items-center">
-                <img v-if="movie.poster_path" :src="'https://image.tmdb.org/t/p/w300' + movie.poster_path" :alt="`${movie.title} poster`" class="rounded-lg mb-2" />
+                <img v-if="movie.poster_path" :src="'https://image.tmdb.org/t/p/w300' + movie.poster_path" :alt="`${movie.title} poster`" class="mb-2 rounded-img" />
             </div>
             <!-- details -->
             <div class="col-8 md:col-8 py-6">
                 <h1 class="text-3xl font-bold mb-2">{{ movie.title }} ({{ formatYear(movie.release_date) }})</h1>
-                <p class="text-gray-700"><span class="font-bold">Release Date: </span>{{ movie.release_date }} | 
-                  <span class="font-bold">Rating: </span>{{ movie.vote_average }} | 
-                  <span class="font-bold">Runtime: </span>{{ formattedRuntime }}</p>
-                <p class="font-italic text-gray-700 text-lg">{{ movie.tagline }}</p>
+                <p class="text-lg"><span class="font-bold">Release Date: </span>{{ movie.release_date }} | <span class="font-bold">Rating: </span>{{ movie.vote_average }} | <span class="font-bold">Runtime: </span>{{ formattedRuntime }}</p>
+                <p class="font-italic text-lg my-5">{{ movie.tagline }}</p>
                 <p class="font-bold text-xl">Overview</p>
-                <p class="text-gray-700 text-xl">{{ movie.overview }}</p>
+                <p class="text-xl">{{ movie.overview }}</p>
                 <p class="font-bold text-xl">Genres:</p>
                 <p class="text-lg">
                     <span v-if="movie.genres && movie.genres.length > 0">
@@ -90,5 +88,9 @@
 
     .object-cover {
         object-fit: cover;
+    }
+
+    .rounded-img {
+        border-radius: 1rem 1rem 1rem 1rem !important;
     }
 </style>
