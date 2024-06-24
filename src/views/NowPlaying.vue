@@ -47,7 +47,7 @@
 </script>
 
 <template>
-    <Carousel :value="movies" :numVisible="1" :numScroll="1" :circular="true" :autoplayInterval="5000" :showNavigators="false">
+    <Carousel :value="movies" :numVisible="1" :numScroll="1" :circular="true" :autoplayInterval="4000" :showNavigators="false">
         <template #item="{ data }">
             <div class="carousel-item">
                 <RouterLink :to="{ name: 'moviedetails', params: { id: data.id } }">
